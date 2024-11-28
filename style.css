@@ -1,0 +1,487 @@
+/* fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* variables */
+
+body{
+    background: var(--bg-body);
+}
+
+
+/*ojo a este dato de abajo*/
+header{
+    padding-top: 0px;
+}
+
+
+
+
+
+:root{
+    --bg-body:#1f212c;
+    --primary-color:#2c5bff;
+    --fontSize-title:40px;
+    --fontSize-parrafos:18px;
+
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+}
+p,a,li,td,input,label{
+    font-family: "Work Sans", sans-serif;
+}
+
+
+
+nav.bg-gym{
+    background:  var(--bg-body);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+nav .navbar-brand img{
+    width: 200px;
+}
+
+nav.bg-gym ul li{
+    margin-top: 20px;
+}
+
+nav.bg-gym ul li a{
+    color: #ffffff;
+    position: relative;
+    font-size: 20px;
+    margin: 0 12px;
+}
+nav.bg-gym ul li a::after{
+    width: 0%;
+    height: 2px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    transition: .4s;
+
+
+}
+
+nav.bg-gym ul li a:hover{
+    color: var(--primary-color);
+}
+
+nav.bg-gym ul li a:hover::after{
+    background: var(--primary-color);
+    width: 40%;
+}
+
+nav.bg-gym ul li.login{
+    margin-left: 150px;
+    margin-right: 30px;
+}
+
+nav.bg-gym ul li.registro a{
+    display: block;
+    padding: 12px 30px  !important; 
+    color: #ffffff;
+    border-radius: 4px;
+    background: var(--primary-color);
+    
+
+}
+div.container{
+    margin-top: 38px;
+    margin-bottom: 30px;
+    
+}
+/*
+nav.bg-gym{
+    background: #04970e;
+}
+*/
+
+/* hero */
+#hero{
+    padding: 200px 0 0;
+
+}
+
+#hero .cont-foto{
+    position: relative;
+    width: 400px;
+}
+
+#hero .cont-foto img{
+    z-index: 2;
+    position: relative;
+    width: 400px;
+}
+
+
+#hero .cont-foto::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    background: var(--primary-color);
+    z-index: 1;
+}
+
+#hero .cont-info{
+    padding-left: 40px;
+
+}
+#hero .cont-info h1{
+    color: #ffffff;
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#hero .cont-info h1 span{
+    border-bottom: 12px solid #ffffff;
+    
+}
+#hero .cont-info p{
+    color: #ffffff;
+    font-size: var(--fontSize-parrafos);
+    margin-bottom: 20px;
+}
+
+#hero .cont-info .destacada h2{
+    color: #ffffff;
+    font-size: var(--fontSize-title);
+}
+
+
+#hero .cont-info .destacada p{
+    font-size: 14px;
+}
+
+
+
+
+
+/*servicios  95 en html */
+
+#servicios{
+    width: 100%;
+    position: relative;
+    padding: 40px 0 100px;
+    text-align: center;
+
+}
+#servicios h2{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#servicios p{
+    color: #ffffff;
+    font-size: var(--fontSize-parrafos);
+}
+
+#servicios .row{
+    margin-top: 100px;
+}
+
+#servicios .card-services{
+    background: #292c36;
+    border-radius: 4px;
+    position: relative;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    text-align: left;
+    transition: .5s;
+    max-width: 210px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+#servicios .card-services:hover{
+    background: var(--primary-color);
+}
+
+
+
+
+#servicios .card-services img{
+    background: #ffffff;
+    width: 70px;
+    padding: 15px;
+    border-radius: 4px;
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    
+}
+
+#servicios .card-services h3{
+    text-align: right;
+    color: #c6c6c6;
+    font-size: 35px;
+    margin-bottom: 20px;
+
+}
+
+#servicios .card-services h4{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#servicios .card-services p{
+    font-size: 13px;
+    color: #c6c6c6;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+#servicios .card-services a{
+    color: #c6c6c6;
+    text-align: left;
+    display: inline-block;  /*  en caso de que no agarre el text-align: a la derecha se pone :block porque en el principio se habia modificado en la fila 176 que todos los textos de la secccion ivan a estar en el centro */
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 2px solid #c6c6c6;
+
+
+}
+
+/*  SECCION    clases destacadas */
+
+
+#cdestacadas{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    padding: 70px 0 100px;
+
+}
+
+#cdestacadas h2{
+    font-size: var(--fontSize-title);
+    color: #ffffff;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#cdestacadas h2::after{
+    width: 63%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 55%;
+    
+}
+
+#cdestacadas .card-destacadas img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+
+#cdestacadas .card-destacadas .cont-info{
+    background:#292c36;
+    padding: 14px;
+    border-radius: 0 0 10px 10px;
+    transition: .4s;
+}
+
+#cdestacadas .card-destacadas .cont-info:hover{
+    background: var(--primary-color);
+}
+
+
+
+.card-destacadas .cont-info h3{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card-destacadas .cont-info p{
+    color: #c6c6c6;
+    font-size: 16px;
+}
+
+
+
+/*comentarios*/
+
+#comentarios{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 40px;
+    color: #ffffff;
+}
+
+#comentarios .carousel-item{
+    background: var(--primary-color);
+    padding: 120px 80px ;
+    border-radius: 10px;
+}
+
+#comentarios .carousel-item img{
+    max-width: 300px;
+}
+
+#comentarios .carousel-item h3{
+    font-size: 36px;
+    margin-bottom: 28px;
+}
+
+/* responsive*/
+
+    
+@media screen and (min-width:320px) and (max-width:990px){
+    header nav button.navbar-toggler{
+        background: var(--primary-color);
+
+    }
+    nav.bg-gym ul li.login{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    nav.bg-gym ul li.registro a{
+        display: inline-block;
+    }
+    #hero{
+        text-align: center;
+    }
+  #hero .cont-foto{
+    width: 100%;    /* debido a que en compatutadora esta con width 400px, en celular debe estar al 100% del codigo 124 */
+  }
+  #hero .cont-foto::before{
+    left: 0;
+  }
+
+  #cdestacadas h2::after {
+    width: 0;
+  }
+
+  #servicios .card-services{
+    max-width: 85%;
+  }
+  #servicios {
+    padding-bottom: 0;
+  }
+
+  #cdestacadas {
+    padding-top: 0;
+  }
+
+  div.container {
+    margin-top: 0;
+  }
+  #cdestacadas .card-destacadas .cont-info{
+    margin-bottom: 50px;
+  }
+
+  #hero .cont-foto img {
+    width: 350px;
+  }
+
+  #hero .cont-info h1{
+    font-size: 40px;
+  }
+
+
+
+
+}
+
+/* https://michalsnik.github.io/aos/    con esto se entra a las animaciones de Scroll  */
+
+
+
+
+/* saque este codigo de you tube  slider infinito*/
+
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+
+/*mi propio codigo css */
+.cambioFondo{
+    background: #ffffff;
+    padding-top: 10px;
+}
+
+
+
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
